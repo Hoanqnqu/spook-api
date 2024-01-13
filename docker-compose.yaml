@@ -1,0 +1,13 @@
+services:
+  mysql:
+    image: mysql:8.0
+    ports:
+      - 3309:3306
+    volumes:
+      - todo-mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: spook
+      MYSQL_DATABASE: spook
+
+volumes:
+  todo-mysql-data:
