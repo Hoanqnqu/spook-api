@@ -5,6 +5,10 @@ export class UserDto {
   @Expose()
   id: string;
 
+  @IsString()
+  @IsNotEmpty()
+  firebaseUID: string;
+
   @Expose()
   @IsNotEmpty()
   @IsString()
@@ -13,10 +17,7 @@ export class UserDto {
   @Expose()
   @IsNotEmpty()
   @IsString()
-  phone: string;
-
-  @Expose()
-  isActive: boolean;
+  email: string;
 
   @Expose()
   role: string;

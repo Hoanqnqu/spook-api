@@ -7,12 +7,10 @@ export class UserEntity extends BaseEntity {
   name: string;
 
   @Column()
-  phone: string;
+  email: string;
 
-  @Column({
-    default: true,
-  })
-  isActive: boolean;
+  @Column()
+  firebaseUID: string;
 
   @Column({
     type: 'enum',
