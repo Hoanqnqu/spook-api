@@ -7,8 +7,8 @@ import {
 } from 'typeorm';
 
 export class BaseEntity {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
   @Exclude({ toPlainOnly: true })
   @CreateDateColumn({ name: 'createdAt', type: 'timestamp', select: false })
